@@ -1,0 +1,54 @@
+$brandcolor1: #E27866;
+$brandcolor2: #41D395;
+$brandcolor3: #6696E2;
+$brandcolor4: #1C1C1C;
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $brandcolor4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+        height: 52px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 148px;
+    }
+}
+
+nav {
+    margin-right: 148px;
+    
+    a {
+        color: #FFFFFF;
+        margin-left: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        opacity: 0.69;
+        position: relative;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            height: 2px;
+            width: 100%;
+            background-color: $brandcolor1;
+            position: absolute;
+            bottom: -26px;
+            left: 0;
+            opacity: 0;
+        }
+        
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+}
