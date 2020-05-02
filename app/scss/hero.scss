@@ -1,0 +1,186 @@
+$brandcolor1: #E27866;
+$brandcolor2: #41D395;
+$brandcolor3: #6696E2;
+$brandcolor4: #1C1C1C;
+
+
+.hero {
+    position: relative;
+}
+.shadow {
+    background-color: $brandcolor4;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+}
+.no_shadow {
+    background-image: url(images/miestas-min.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+}
+.intro {
+    margin-left: 148px;
+    margin-top: 75px;
+    margin-bottom: 139px;
+    width: 557px;
+    position: relative;
+
+    svg {
+        width: 44%; 
+        height: auto;
+        margin-bottom: 20px;
+    }
+    h2, p {
+        color: #F5F5F5;
+    }
+    h2 {
+        font-weight: normal;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            bottom: -22px;
+            left: 0;
+            height: 2px;
+            width: 80px;
+            background-color: #FFFFFF;   
+        }
+    }
+    p {
+        margin-top: 51px;
+        opacity: 0.8;
+        line-height: 1.6;
+        font-weight: lighter;
+    }
+    button {
+        width: 135px;
+        height: 42px;
+        border: 2px solid #FFFFFF;
+        color: #FFFFFF;
+        background-color: transparent;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        cursor: pointer;
+
+        &:active {
+            border: 2px solid $brandcolor4;
+            color: $brandcolor4;
+            background-color: #FFFFFF;
+            font-weight: bold;
+        }
+    }
+}
+
+.no_shadow form {
+    width: 360px;
+    margin-top: 75px;
+    margin-right: 148px;
+    margin-bottom: 139px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    z-index: 1;
+
+    h4, button {
+        height: 57px;
+    }
+    h4, p, .details_input, .radio_input {
+        padding-left: 50px;
+    }
+    h4 {
+        background-color: #F5F5F5;
+        padding-top: 15px;
+        font-weight: lighter;
+        border-radius: 5px 5px 0 0;
+
+        span {
+            color: $brandcolor1;
+        }
+    }
+    .details_input {
+        input {
+            width: 260px;
+            height: 49px;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            }
+        }
+    .radio_input {
+        margin-top: 17px;
+        margin-bottom: 42px;
+
+        label {
+            text-transform: uppercase;
+            margin-right: 20px;
+            margin-left: 15px;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                font-weight: bold;
+            }
+
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+
+                &:checked ~ span:after {
+                    display: block;
+                }
+                &:checked ~ span {
+                    opacity: 1;
+                }
+            }
+            span {
+                position: absolute;
+                top: 0;
+                left: -15px;
+                width: 11.71px;
+                height: 11.71px;
+                border-radius: 50%;
+                border: 1px solid $brandcolor2;
+                opacity: 0.5;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 2.42px;
+                    left: 2.42px;
+                    display: none;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: $brandcolor2;
+                }
+            }     
+        }
+    }
+    p {
+        padding-top: 30px;
+    }
+    button {
+        background-color: $brandcolor2;
+        color: #FFFFFF;
+        width: 100%;
+        border: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 0 0 5px 5px;
+    }
+}
+::placeholder {
+    color: #D8D8D8;
+    padding-left: 10px;
+}

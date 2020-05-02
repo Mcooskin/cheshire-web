@@ -7,48 +7,46 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 2;
     background-color: $brandcolor4;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 148px;
+    padding-left: 148px;
 
     svg {
-        height: 52px;
         margin-top: 10px;
         margin-bottom: 10px;
-        margin-left: 148px;
     }
-}
-
-nav {
-    margin-right: 148px;
+    nav {
+        a {
+            color: #FFFFFF;
+            margin-left: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            opacity: 0.69;
+            position: relative;
     
-    a {
-        color: #FFFFFF;
-        margin-left: 50px;
-        cursor: pointer;
-        text-decoration: none;
-        opacity: 0.69;
-        position: relative;
-
-        &:hover {
-            opacity: 1;
-        }
-
-        &::after {
-            content: "";
-            display: inline-block;
-            height: 2px;
-            width: 100%;
-            background-color: $brandcolor1;
-            position: absolute;
-            bottom: -26px;
-            left: 0;
-            opacity: 0;
-        }
-        
-        &:hover::after {
-            opacity: 1;
+            &:hover {
+                opacity: 1;
+            }
+    
+            &::after {
+                content: "";
+                display: inline-block;
+                height: 2px;
+                width: 100%;
+                background-color: $brandcolor1;
+                position: absolute;
+                bottom: -26px;
+                left: 0;
+                opacity: 0;
+            }
+            
+            &:hover::after {
+                opacity: 1;
+            }
         }
     }
 }

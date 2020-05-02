@@ -1,5 +1,7 @@
 @import "font_size";
 @import "header";
+@import "hero";
+@import "social_media";
 
 $brandcolor1: #E27866;
 $brandcolor2: #41D395;
@@ -17,78 +19,3 @@ body {
 main {
     margin-top: 72px;
 }
-.hero {
-    background-image: url(images/miestas-min.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 80vh;
-    display: flex;
-    justify-content: space-between;
-
-    .intro {
-        margin-left: 148px;
-        margin-top: 75px;
-        width: 500px;
-
-        svg {
-            width: 246px;
-        }
-        h2, p {
-            color: white;
-        }
-    }
-}
-
-.hero form {
-    width: 360px;
-    margin-right: 148px;
-    margin-top: 75px;
-    background-color: white;
-    border-radius: 5px;
-
-    h4, button {
-        height: 57px;
-    }
-    h4, p, .details_input, .radio_input {
-        padding-left: 50px;
-    }
-    h4 {
-        background-color: #F5F5F5;
-        padding-top: 15px;
-        font-weight: lighter;
-
-        span {
-            color: $brandcolor1;
-        }
-    }
-    .details_input {
-        input {
-            width: 260px;
-            height: 49px;
-            border-top: none;
-            border-right: none;
-            border-left: none;
-        }
-    }
-    .radio_input {
-        input {
-
-        }
-        label {
-            text-transform: uppercase;
-            margin-right: 20px;
-        }
-    }
-    p {
-        padding-top: 30px;
-    }
-    button {
-        background-color: $brandcolor2;
-        color: white;
-        width: 100%;
-        border: none;
-        text-transform: uppercase;
-    }
-}
-
