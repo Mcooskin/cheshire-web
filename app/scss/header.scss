@@ -1,14 +1,13 @@
 $brandcolor1: #E27866;
 $brandcolor2: #41D395;
 $brandcolor3: #6696E2;
-$brandcolor4: #1C1C1C;
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
-    background-color: $brandcolor4;
+    background-color: #1C1C1C;
     display: flex;
     justify-content: space-between;
     align-items: center;

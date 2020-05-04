@@ -1,0 +1,24 @@
+$brandcolor1: #E27866;
+$brandcolor2: #41D395;
+$brandcolor3: #6696E2;
+
+.gallery {
+    position: relative;
+
+    .shadow {
+        background-color: $brandcolor3;
+        opacity: 0.42;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .picture_grid {
+        background-image: url(images/kalnai-min.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
