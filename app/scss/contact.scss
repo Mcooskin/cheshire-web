@@ -1,0 +1,99 @@
+@import "mixins";
+
+$brandcolor1: #E27866;
+$brandcolor2: #41D395;
+$brandcolor3: #6696E2;
+
+.contact {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    background-color: $brandcolor1;
+    @include section-centered;
+    height: 80vh;
+
+    h2 {
+        @include headline-uppercase;
+        color: #FFFF;
+        
+        &::after {
+            @include headline-after;
+            background-color: $brandcolor2; 
+        }
+    }
+    p {
+        color: #FFFF;
+        @include headline-paragraph;
+    }
+    form {
+        background-color: #ffff;
+        padding-top: 33px;
+        padding-right: 65px;
+        padding-bottom: 33px;
+        padding-left: 65px;
+        border-radius: 5px;
+        margin-top: 27px;
+        box-shadow: 1px 3px 6px rgb(58, 57, 57);
+
+        .details_input {
+            input {
+                @include details-input; 
+            }
+        }
+        .radio_input {
+            margin-top: 17px;
+            margin-bottom: 42px;
+
+            label {
+                @include form-label;
+
+                &:hover {
+                    font-weight: bold;
+                }
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+
+                    &:checked ~ span:after {
+                        display: block;
+                    }
+                    &:checked ~ span {
+                        opacity: 1;
+                    }
+                }
+                span {
+                    position: absolute;
+                    top: 0;
+                    left: -15px;
+                    width: 11.71px;
+                    height: 11.71px;
+                    border-radius: 50%;
+                    border: 1px solid $brandcolor2;
+                    opacity: 0.5;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        @include centered;
+                        display: none;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background-color: $brandcolor2;
+                    }
+                }     
+            }
+        }
+        button {
+            @include form-button;
+            width: 148px;
+            height: 48px;
+            border-radius: 5px;
+            transform: translateX(40%);
+        }
+    }
+}
+::placeholder {
+    color: #707070;
+    padding-left: 10px;
+}

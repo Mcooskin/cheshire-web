@@ -292,55 +292,109 @@
         <section class="pricing">
             <h2>Pricing options</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div class="card">
-                <div>
-                    <h4>Basic</h4>
-                    <p>$<span>0</span></p>
-                    <h5>Free for life</h5>
+            <div class="pricing_cards">
+                <div class="card">
+                    <div class="card_head">
+                        <h4>Basic</h4>
+                        <p>$<span>0</span></p>
+                        <h5>Free for life</h5>
+                    </div>
+                    <table>
+                        <thead class="narrow_head">
+                            <tr>
+                                <th></th>                          
+                            </tr>  
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1 GB of space</td>
+                            </tr>
+                            <tr>
+                                <td>10 GB of bandwidth</td>
+                            </tr>
+                            <tr>
+                                <td>3 websites</td>
+                            </tr>
+                            <tr>
+                                <td>Basic customization</td>
+                            </tr>
+                            <tr>
+                                <td>Wordpress integration</td>
+                            </tr>
+                            <tr>
+                                <td>Email support</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div></div>
-                <ul>
-                    <li>1 GB of space</li>
-                    <li>10 GB of bandwidth</li>
-                    <li>3 websites</li>
-                    <li>Basic customization</li>
-                    <li>Wordpress integration</li>
-                    <li>Email support</li>
-                </ul>
-            </div>
-            <div class="card">
-                <div>
-                    <h4>Professional</h4>
-                    <p>$<span>19</span></p>
-                    <h5>Monthly Payment</h5>
+                <div class="card">
+                    <div class="card_head">
+                        <h4>Professional</h4>
+                        <p>$<span>19</span></p>
+                        <h5>Monthly Payment</h5>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Our most popular</th>                          
+                            </tr>  
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>5 GB of space</td>
+                            </tr>
+                            <tr>
+                                <td>50 GB of bandwidth</td>
+                            </tr>
+                            <tr>
+                                <td>12 websites</td>
+                            </tr>
+                            <tr>
+                                <td>Advanced customization</td>
+                            </tr>
+                            <tr>
+                                <td>Wordpress integration</td>
+                            </tr>
+                            <tr>
+                                <td>Email support</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <ul>
-                    <li>Our most popular</li>
-                </ul>
-                <ul>
-                    <li>5 GB of space</li>
-                    <li>50 GB of bandwidth</li>
-                    <li>12 websites</li>
-                    <li>Advanced customization</li>
-                    <li>Wordpress integration</li>
-                    <li>Email support</li>
-                </ul>
-            </div>
-            <div class="card">
-                <div>
-                    <h4>Enterprise</h4>
-                    <p>$<span>70</span></p>
-                    <h5>Monthly Payment</h5>
+                <div class="card">
+                    <div class="card_head">
+                        <h4>Enterprise</h4>
+                        <p>$<span>70</span></p>
+                        <h5>Monthly Payment</h5>
+                    </div>
+                    <table>
+                        <thead class="narrow_head">
+                            <tr>
+                                <th></th>                          
+                            </tr>  
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Unlimited space</td>
+                            </tr>
+                            <tr>
+                                <td>Unlimited bandwidth</td>
+                            </tr>
+                            <tr>
+                                <td>100 websites</td>
+                            </tr>
+                            <tr>
+                                <td>Advanced customization</td>
+                            </tr>
+                            <tr>
+                                <td>Wordpress integration</td>
+                            </tr>
+                            <tr>
+                                <td>24/7 customer support</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div></div>
-                <ul>
-                    <li>Unlimited space</li>
-                    <li>Unlimited bandwidth</li>
-                    <li>100 websites</li>
-                    <li>Advanced customization</li>
-                    <li>Wordpress integration</li>
-                    <li>24/7 customer support</li>
-                </ul>
             </div>
         </section>
 
@@ -355,13 +409,21 @@
             <h2>Contact us</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <form>
-                <input type="text" id="first_name" name="first_name" placeholder="First name"><br>
-                <input type="text" id="last_name" name="last_name" placeholder="Last name"><br>
-                <input type="tel" id="phone-number" name="phone_number" placeholder="Phone number">
-                <input type="radio" id="personal" name="user" value="personal">
-                <label for="personal">Personal</label>
-                <input type="radio" id="company" name="user" value="company">
-                <label for="company">Company</label>
+                <div class="details_input">
+                    <input type="text" id="first_name" name="first_name" placeholder="First name"><br>
+                    <input type="text" id="last_name" name="last_name" placeholder="Last name"><br>
+                    <input type="tel" id="phone-number" name="phone_number" placeholder="Phone number">
+                </div>
+                <div class="radio_input">
+                    <label for="personal">Personal
+                        <input type="radio" id="personal" name="user" value="personal">
+                        <span class="radio_button"></span>
+                    </label>
+                    <label for="company">Company
+                        <input type="radio" id="company" name="user" value="company">
+                        <span class="radio_button"></span>
+                    </label><br>
+                </div>
                 <button>Send</button>
             </form>
         </section>

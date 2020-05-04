@@ -1,3 +1,5 @@
+@import "mixins";
+
 .social_media {
     padding-top: 18px;
     padding-right: 148px;
@@ -15,11 +17,7 @@
         line-height: 1.6;
     }
     .social {
-        display: flex;
-    
-        svg {
-            margin-left: 105px;
-        }
+        @include social-spacing;
     }
 }
 

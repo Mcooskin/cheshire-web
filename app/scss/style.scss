@@ -5,6 +5,11 @@
 @import "gallery";
 @import "about";
 @import "features";
+@import "pricing";
+@import "reviews";
+@import "mixins";
+@import "contact";
+@import "footer";
 
 $brandcolor1: #E27866;
 $brandcolor2: #41D395;
@@ -20,3 +25,4 @@ body {
 main {
     margin-top: 72px;
 }
+

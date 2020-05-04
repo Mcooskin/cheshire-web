@@ -1,44 +1,35 @@
+@import "mixins";
+
 $brandcolor1: #E27866;
 $brandcolor2: #41D395;
 $brandcolor3: #6696E2;
 
 .features {
     padding-top: 100px;
-    padding-right: 148px;
     padding-bottom: 100px;
-    padding-left: 148px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include section-centered;
     
     h2 {
-        text-transform: uppercase;
-        position: relative;
+        @include headline-uppercase;
 
         &::after {
-            content: "";
-            display: inline-block;
-            position: absolute;
-            left: 40%;
-            bottom: -21px;
-            height: 2px;
-            width: 64px;
+            @include headline-after;
             background-color: $brandcolor1; 
         }
     }
     p {
-        margin-top: 50px;
+        @include headline-paragraph;
         color: #86878B;
     }
     .features_grid {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        width: 100%;
 
         .feature_block {
             text-align: center;
-            width: 25%;
+            width: 300px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -54,10 +45,7 @@ $brandcolor3: #6696E2;
                 svg {
                     position: absolute;
                     width: 50%;
-                    left: 25%;
-                    transform: translateX(-50%);
-                    top: 50%;
-                    transform: translateY(-50%);
+                    @include centered;
                 }
             }
             h4 {

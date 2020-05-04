@@ -1,0 +1,64 @@
+@mixin headline-after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 40%;
+    bottom: -21px;
+    height: 2px;
+    width: 64px;
+  }
+
+  @mixin headline-uppercase {
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  @mixin headline-paragraph {
+    margin-top: 50px;
+  }
+
+  @mixin section-centered {
+    padding-right: 148px;
+    padding-left: 148px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin centered {
+    left: 25%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @mixin form-label {
+    text-transform: uppercase;
+    margin-right: 20px;
+    margin-left: 15px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  @mixin details-input {
+    width: 260px;
+    height: 49px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+  }
+
+  @mixin form-button {
+    background-color: $brandcolor2;
+    color: #FFFFFF;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  @mixin social-spacing {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }

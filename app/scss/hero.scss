@@ -1,3 +1,5 @@
+@import "mixins";
+
 $brandcolor1: #E27866;
 $brandcolor2: #41D395;
 $brandcolor3: #6696E2;
@@ -109,11 +111,7 @@ $brandcolor3: #6696E2;
             }
             .details_input {
                 input {
-                    width: 260px;
-                    height: 49px;
-                    border-top: none;
-                    border-right: none;
-                    border-left: none;
+                    @include details-input; 
                 }
             }
             .radio_input {
@@ -121,11 +119,7 @@ $brandcolor3: #6696E2;
                 margin-bottom: 42px;
 
                 label {
-                    text-transform: uppercase;
-                    margin-right: 20px;
-                    margin-left: 15px;
-                    position: relative;
-                    cursor: pointer;
+                    @include form-label;
 
                     &:hover {
                         font-weight: bold;
@@ -155,16 +149,13 @@ $brandcolor3: #6696E2;
                         &:after {
                             content: "";
                             position: absolute;
-                            left: 25%;
-                            transform: translateX(-50%);
-                            top: 50%;
-                            transform: translateY(-50%);
+                            @include centered;
                             display: none;
                             width: 5px;
                             height: 5px;
                             border-radius: 50%;
                             background-color: $brandcolor2;
-                            }
+                        }
                     }     
                 }
             }
@@ -172,12 +163,8 @@ $brandcolor3: #6696E2;
                 padding-top: 30px;
             }
             button {
-                background-color: $brandcolor2;
-                color: #FFFFFF;
+                @include form-button;
                 width: 100%;
-                border: none;
-                text-transform: uppercase;
-                cursor: pointer;
                 border-radius: 0 0 5px 5px;
                 position: absolute;
                 bottom: 0;
