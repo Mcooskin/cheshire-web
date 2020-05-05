@@ -10,6 +10,15 @@ $brandcolor3: #6696E2;
     background-color: $brandcolor3;
     @include section-centered;
 
+    @media (max-width: 1000px) {
+        padding-right: 80px;
+        padding-left: 80px; 
+    }
+    @media (max-width: 450px) {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
     h2 {
         @include headline-uppercase;
         color: #ffff;
@@ -24,10 +33,12 @@ $brandcolor3: #6696E2;
         color: #ffff;
     }
     .pricing_cards {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        @include grid_layout;
+
+        @media (max-width: 1230px) {
+            flex-direction: column;
+            align-items: center;
+        }
         
         .card {
             margin-top: 65px;
@@ -36,6 +47,10 @@ $brandcolor3: #6696E2;
             justify-content: flex-end;
             width: 300px;
             border-radius: 5px;
+
+            @media (max-width: 350px) {
+                width: 250px;
+            }
 
             .card_head {
                 background-color: #1C1C1C;
@@ -62,6 +77,9 @@ $brandcolor3: #6696E2;
                 text-align: center;
                 border-collapse: collapse;
                 width: 300px;
+                @media (max-width: 350px) {
+                    width: 250px;
+                }
 
                 thead {
                     th {

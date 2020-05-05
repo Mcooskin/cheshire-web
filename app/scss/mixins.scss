@@ -2,7 +2,8 @@
     content: "";
     display: inline-block;
     position: absolute;
-    left: 40%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -21px;
     height: 2px;
     width: 64px;
@@ -11,10 +12,12 @@
   @mixin headline-uppercase {
     text-transform: uppercase;
     position: relative;
+    text-align: center;
   }
 
   @mixin headline-paragraph {
     margin-top: 50px;
+    text-align: center;
   }
 
   @mixin section-centered {
@@ -47,6 +50,7 @@
     border-top: none;
     border-right: none;
     border-left: none;
+    border-radius: 0;
   }
 
   @mixin form-button {
@@ -61,4 +65,11 @@
     display: flex;
     justify-content: space-between;
     width: 50%;
+  }
+
+  @mixin grid_layout {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }

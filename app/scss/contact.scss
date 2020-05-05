@@ -9,7 +9,24 @@ $brandcolor3: #6696E2;
     padding-bottom: 50px;
     background-color: $brandcolor1;
     @include section-centered;
-    height: 80vh;
+
+    @media (max-width: 1000px) {
+        padding-right: 80px;
+        padding-left: 80px; 
+        height: auto;
+    }
+    @media (max-width: 700px) {
+        padding-right: 60px;
+        padding-left: 60px;
+        padding-top: 40px;
+        height: auto;
+    }
+    @media (max-width: 450px) {
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 40px;
+        height: auto;
+    }
 
     h2 {
         @include headline-uppercase;
@@ -33,6 +50,15 @@ $brandcolor3: #6696E2;
         border-radius: 5px;
         margin-top: 27px;
         box-shadow: 1px 3px 6px rgb(58, 57, 57);
+
+        @media (max-width: 450px) {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        @media (max-width: 350px) {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
 
         .details_input {
             input {

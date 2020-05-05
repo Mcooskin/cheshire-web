@@ -1,5 +1,8 @@
 nav a {
     font-size: 14px;
+    @media (max-width: 450px) {
+        font-size: 16px;
+    }
 }
 h2 {
     font-size: 36px;
@@ -12,9 +15,15 @@ h4 {
 }
 h5 {
     font-size: 14px;
+    @media (max-width: 450px) {
+        font-size: 16px;
+    }
 }
 p {
     font-size: 14px;
+    @media (max-width: 450px) {
+        font-size: 16px;
+    }
 }
 .hero p {
     font-size: 16px;
@@ -39,6 +48,9 @@ th, td {
 }
 label {
     font-size: 9px;
+    @media (max-width: 450px) {
+        font-size: 11px;
+    }
 }
 ::placeholder {
     font-size: 12px;

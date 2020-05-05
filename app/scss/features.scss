@@ -8,7 +8,19 @@ $brandcolor3: #6696E2;
     padding-top: 100px;
     padding-bottom: 100px;
     @include section-centered;
-    
+
+    @media (max-width: 1000px) {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+    @media (max-width: 700px) {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    @media (max-width: 450px) {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
     h2 {
         @include headline-uppercase;
 
@@ -22,10 +34,16 @@ $brandcolor3: #6696E2;
         color: #86878B;
     }
     .features_grid {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 100%;
+        @include grid_layout;
+
+        @media (max-width: 1230px) {
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+        @media (max-width: 700px) {
+            flex-direction: column;
+            align-items: center;
+        }
 
         .feature_block {
             text-align: center;
@@ -34,6 +52,13 @@ $brandcolor3: #6696E2;
             flex-direction: column;
             align-items: center;
             margin-top: 65px;
+
+            @media (max-width: 1230px) {
+                width: 45%;
+            }
+            @media (max-width: 450px) {
+                width: 80%;
+            }
 
             .picture_circle {
                 width: 50px;
