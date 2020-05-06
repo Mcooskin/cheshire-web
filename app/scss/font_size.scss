@@ -1,4 +1,4 @@
-nav a {
+.desktop_menu li {
     font-size: 14px;
     @media (max-width: 450px) {
         font-size: 16px;
@@ -66,4 +66,7 @@ label {
 }
 .card p span {
     font-size: 94px;
+}
+li {
+    font-size: 20px;
 }

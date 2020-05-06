@@ -51,6 +51,8 @@
     border-right: none;
     border-left: none;
     border-radius: 0;
+    outline: none;
+    padding-left: 10px;
   }
 
   @mixin form-button {
