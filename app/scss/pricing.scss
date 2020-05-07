@@ -1,114 +1,105 @@
-@import "mixins";
-
-$brandcolor1: #E27866;
-$brandcolor2: #41D395;
-$brandcolor3: #6696E2;
-
 .pricing {
     padding-top: 100px;
     padding-bottom: 100px;
     background-color: $brandcolor3;
-    @include section-centered;
 
-    @media (max-width: 1000px) {
-        padding-right: 80px;
-        padding-left: 80px; 
-    }
-    @media (max-width: 450px) {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
+    .container {
+        @include container-max;
+        @include section-centered;
 
-    h2 {
-        @include headline-uppercase;
-        color: #ffff;
-
-        &::after {
-            @include headline-after;
-            background-color: $brandcolor2; 
-        }
-    }
-    p {
-        @include headline-paragraph;
-        color: #ffff;
-    }
-    .pricing_cards {
-        @include grid_layout;
-
-        @media (max-width: 1230px) {
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .card {
-            margin-top: 65px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            width: 300px;
-            border-radius: 5px;
-
-            @media (max-width: 350px) {
-                width: 250px;
+        h2 {
+            @include headline-uppercase;
+            color: #ffff;
+    
+            &::after {
+                @include headline-after;
+                background-color: $brandcolor2; 
             }
-
-            .card_head {
-                background-color: #1C1C1C;
-                border-radius: 5px 5px 0 0;
-
-                h4, p, h5 {
-                    color: #ffff;
-                    text-align: center;
-                }
-                h4 {
-                    font-weight: normal;
-                    padding-top: 14px;
-                    margin-bottom: 13px;
-                }
-                h5 {
-                    padding-bottom: 19px;
-                    font-weight: normal;
-                }
-                p {
-                    margin-top: 0;
-                }
+        }
+        p {
+            @include headline-paragraph;
+            color: #ffff;
+        }
+        .pricing_cards {
+            @include grid_layout;
+    
+            @media (max-width: 1230px) {
+                flex-direction: column;
+                align-items: center;
             }
-            table {
-                text-align: center;
-                border-collapse: collapse;
+            
+            .card {
+                margin-top: 65px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
                 width: 300px;
+                border-radius: 5px;
+    
                 @media (max-width: 350px) {
                     width: 250px;
                 }
-
-                thead {
-                    th {
+    
+                .card_head {
+                    background-color: #1C1C1C;
+                    border-radius: 5px 5px 0 0;
+    
+                    h4, p, h5 {
                         color: #ffff;
+                        text-align: center;
+                    }
+                    h4 {
                         font-weight: normal;
-                        padding-top: 10px;
-                        padding-bottom: 10px;
-                        background-color: $brandcolor2;
-                        margin: 0;
-                        text-transform: uppercase;
+                        padding-top: 14px;
+                        margin-bottom: 13px;
                     }
-                }     
-                .narrow_head {
-                    th {
-                        padding-top: 6px;
-                        padding-bottom: 0;
+                    h5 {
+                        padding-bottom: 19px;
+                        font-weight: normal;
                     }
-                } 
-                td {
-                    background-color: #ffff;
-                    text-transform: uppercase;
-                    height: 40px;
-                    color: #86878B;
+                    p {
+                        margin-top: 0;
+                    }
                 }
-                tr:last-child td:last-child {
-                    border-bottom-right-radius: 5px;
-                    border-bottom-left-radius: 5px;
+                table {
+                    text-align: center;
+                    border-collapse: collapse;
+                    width: 300px;
+                    @media (max-width: 350px) {
+                        width: 250px;
+                    }
+    
+                    thead {
+                        th {
+                            color: #ffff;
+                            font-weight: normal;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            background-color: $brandcolor2;
+                            margin: 0;
+                            text-transform: uppercase;
+                        }
+                    }     
+                    .narrow_head {
+                        th {
+                            padding-top: 6px;
+                            padding-bottom: 0;
+                        }
+                    } 
+                    td {
+                        background-color: #ffff;
+                        text-transform: uppercase;
+                        height: 40px;
+                        color: #86878B;
+                    }
+                    tr:last-child td:last-child {
+                        border-bottom-right-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                    }
                 }
             }
         }
     }
 }
+
+    

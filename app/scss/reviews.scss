@@ -1,97 +1,87 @@
-@import "mixins";
-
-$brandcolor1: #E27866;
-$brandcolor2: #41D395;
-$brandcolor3: #6696E2;
-
-
 .reviews {
     padding-top: 100px;
-    padding-bottom: 100px;
-    @include section-centered;
+    padding-bottom: 56px;
 
-    @media (max-width: 1000px) {
-        padding-right: 80px;
-        padding-left: 80px; 
-    }
-    @media (max-width: 700px) {
-        padding-right: 60px;
-        padding-left: 60px;
-    }
-    @media (max-width: 450px) {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
-
-    h2 {
-        @include headline-uppercase;
-
-        &::after {
-            @include headline-after;
-            background-color: $brandcolor3; 
-        }
-    }
-    .review_grid {
-        @include grid_layout;
-
-        @media (max-width: 1230px) {
-            flex-direction: column;
-            align-items: center; 
-        }
-
-        .review_block {
-            width: 300px;
-            margin-top: 90px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            
-            @media (max-width: 350px) {
-                width: 250px;
+    .container {
+        @include container-max;
+        
+        h2 {
+            @include headline-uppercase;
+    
+            &::after {
+                @include headline-after;
+                background-color: $brandcolor3; 
             }
+        }
+        .swiper-container {
+            padding-top: 90px;
+            padding-bottom: 90px;
 
-            .chat_bubble {
-                background-color: $brandcolor3;
-                color: #ffff;
-                line-height: 1.6;;
-                padding: 20px;
-                border-radius: 5px;
-                position: relative;
-
-                &::after {
-                    content: "";
-                    display: inline-block;
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 2px;
-                    background-color: $brandcolor3;
-                    position: absolute;
-                    bottom: -6px;
-                    left: 23px;
-                    transform: rotate(45deg);
-                }
-            }
-            .user_info {
+            .swiper-wrapper {
                 display: flex;
-                align-items: center;
-                margin-top: 20px;
+                align-items: flex-end;
 
-                .picture_bubble {
-                    background-image: url(images/zmogelis_avatar_2_u231.jpg);
-                    width: 70px;
-                    height: 70px;
-                    border-radius: 50%;
-                    margin-right: 16px;
-                }
-                .text_info {
-                    .occupation {
-                        color: #86878B;
-                        margin-top: 4px;
+                .swiper-slide {      
+                    .chat_bubble {
+                        background-color: $brandcolor3;
+                        color: #ffff;
+                        line-height: 1.6;;
+                        padding: 20px;
+                        border-radius: 5px;
+                        position: relative;
+        
+                        &::after {
+                            content: "";
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 2px;
+                            background-color: $brandcolor3;
+                            position: absolute;
+                            bottom: -6px;
+                            left: 23px;
+                            transform: rotate(45deg);
+                        }
+                    }
+                    .user_info {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 20px;
+        
+                        .picture_bubble {
+                            width: 70px;
+                            height: 70px;
+                            border-radius: 50%;
+                            margin-right: 16px;
+                            object-fit: cover;
+                        }
+                        .text_info {
+                            .occupation {
+                                color: #86878B;
+                                margin-top: 4px;
+                            }
+                        }
                     }
                 }
+            } 
+            .swiper-pagination {
+                bottom: 0;
+
+                .swiper-pagination-bullet {
+                    background-color: #fff;
+                    width: 10px;
+                    height: 10px;
+                    margin-left: 20px;
+                    border: 1px solid $brandcolor1;
+                }
+
+                .swiper-pagination-bullet-active {
+                    background-color: $brandcolor1;
+                    width: 10px;
+                    height: 10px;
+                    margin-left: 20px;
+                } 
             }
-        }
-
-
+        }     
     }
 }

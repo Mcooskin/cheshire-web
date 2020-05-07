@@ -1,25 +1,10 @@
-@import "mixins";
-
-$brandcolor1: #E27866;
-$brandcolor2: #41D395;
-$brandcolor3: #6696E2;
-
 .features {
     padding-top: 100px;
     padding-bottom: 100px;
-    @include section-centered;
 
-    @media (max-width: 1000px) {
-        padding-right: 80px;
-        padding-left: 80px;
-    }
-    @media (max-width: 700px) {
-        padding-right: 60px;
-        padding-left: 60px;
-    }
-    @media (max-width: 450px) {
-        padding-right: 30px;
-        padding-left: 30px;
+    .container {
+        @include container-max;
+        @include section-centered;
     }
     h2 {
         @include headline-uppercase;

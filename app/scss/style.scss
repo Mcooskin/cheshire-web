@@ -1,3 +1,5 @@
+@import "vars";
+@import "mixins";
 @import "font_size";
 @import "header";
 @import "hero";
@@ -7,17 +9,16 @@
 @import "features";
 @import "pricing";
 @import "reviews";
-@import "mixins";
 @import "contact";
 @import "footer";
 
-$brandcolor1: #E27866;
-$brandcolor2: #41D395;
-$brandcolor3: #6696E2;
 
 * {
     margin: 0;
     box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
 }
 body {
     font-family: 'Montserrat', sans-serif;

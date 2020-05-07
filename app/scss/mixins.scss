@@ -21,8 +21,6 @@
   }
 
   @mixin section-centered {
-    padding-right: 148px;
-    padding-left: 148px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,3 +73,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
+
+  @mixin container-max {
+    max-width: 1280px;
+    padding: 0 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
