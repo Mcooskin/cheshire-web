@@ -2,7 +2,7 @@
 
 // Initializing swiper for reviews section
 
-var reviewSwiper = new Swiper ('.swiper-container', {
+var reviewSwiper = new Swiper ('.reviews-swiper', {
     direction: 'horizontal',
     loop: false,
     slidesPerView: 1,
@@ -26,10 +26,36 @@ var reviewSwiper = new Swiper ('.swiper-container', {
       el: '.swiper-pagination',
       clickable: true,
     },
-
-    // // Navigation arrows
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
 })
+
+// Gallery section slides
+
+let navBlocks = document.querySelectorAll('.nav_block');
+let gallerySlides = document.querySelectorAll('.gallery_slide');
+
+for (let i = 0; i < navBlocks.length; i++) {
+    navBlocks[i].addEventListener('click', function() {
+        
+        for (let z = 0; z < navBlocks.length; z++) {
+            navBlocks[z].classList.remove('active');
+        }
+        
+        this.classList.add('active');
+
+
+        // Get data-target value
+        let targetSlide = this.dataset.target; // 1, 2, 3
+
+        // Select feature-block elements by data-slide value
+        let slide = document.querySelector('.gallery_slide[data-slide="'+ targetSlide +'"]');
+
+
+        for (let x = 0; x < gallerySlides.length; x++) {
+            gallerySlides[x].classList.remove('active');
+        }
+
+        slide.classList.add('active');
+        
+    });
+}
+
