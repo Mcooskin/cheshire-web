@@ -59,3 +59,39 @@ for (let i = 0; i < navBlocks.length; i++) {
     });
 }
 
+// Burger menu 
+
+document.querySelector('.burger_menu').addEventListener('click', function() {
+
+    let menuClose = document.querySelector('.menu_close');
+    let menuOpen = document.querySelector('.menu_open');
+    let mobileMenu = document.querySelector('.mobile_menu');
+    
+    if (menuClose.classList.contains('active')) {
+        menuClose.classList.remove('active'); 
+        menuOpen.classList.add('active');
+        mobileMenu.classList.remove('visible');
+    }
+    else {
+        menuClose.classList.add('active'); 
+        menuOpen.classList.remove('active');
+        mobileMenu.classList.add('visible');
+    }
+});
+
+let mobileMenuLines = document.querySelectorAll('.mobile_menu_line');
+
+for (let i = 0; i < mobileMenuLines.length; i++) {
+    mobileMenuLines[i].addEventListener('click', function() {
+
+        let mobileMenu = document.querySelector('.mobile_menu');
+        mobileMenu.classList.remove('visible');
+
+        let menuClose = document.querySelector('.menu_close');
+        menuClose.classList.remove('active');
+
+        let menuOpen = document.querySelector('.menu_open');
+        menuOpen.classList.add('active');
+    }
+)};
+    
