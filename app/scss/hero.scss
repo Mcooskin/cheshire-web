@@ -25,7 +25,7 @@
             width: 100%;
             height: 100%;
         }
-        .no_shadow {
+        .content {
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -126,7 +126,7 @@
                     }
                 }
             }
-            form {
+            .subscription {
                 max-width: 360px;
                 background-color: #FFFFFF;
                 border-radius: 5px;
@@ -176,46 +176,55 @@
                     @media (max-width: 1000px) {
                         margin-bottom: 17px;
                     }
-    
-                    label {
-                        @include form-label;
-    
-                        &:hover {
+                    
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        border: 2px solid red;
+
+                        & + label {
+                            position: relative;
+                            cursor: pointer;
+                            display: inline-block;
+                            line-height: 14px;
+                            margin-left: 0;
+                            padding-left: 20px;
+                        }
+                        &:checked + label {
                             font-weight: bold;
                         }
-                        input {
-                            position: absolute;
-                            opacity: 0;
-                            cursor: pointer;
-    
-                            &:checked ~ span:after {
-                                display: block;
-                            }
-                            &:checked ~ span {
-                                opacity: 1;
-                            }
-                        }
-                        span {
+
+                        & + label::before {
+                            content: "";
                             position: absolute;
                             top: 0;
-                            left: -15px;
-                            width: 11.71px;
-                            height: 11.71px;
+                            left: 0;
+                            width: 12px;
+                            height: 12px;
                             border-radius: 50%;
                             border: 1px solid $brandcolor2;
                             opacity: 0.5;
-    
-                            &:after {
-                                content: "";
-                                position: absolute;
-                                @include centered;
-                                display: none;
-                                width: 5px;
-                                height: 5px;
-                                border-radius: 50%;
-                                background-color: $brandcolor2;
-                            }
-                        }     
+                        }
+
+                        &:checked + label::before {
+                            opacity: 1;
+                        }
+
+                        &:checked + label::after {
+                            content: "";
+                            position: absolute;
+                            left: 4.5px;
+                            transform: translateX(-50%);
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 100%;
+                            background-color: $brandcolor2;
+                        }                      
+                    }     
+                    label {
+                        @include form-label;  
                     }
                 }
                 p {

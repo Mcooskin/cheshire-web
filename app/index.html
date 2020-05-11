@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
         <div class="container">
             <a href="#">        
@@ -178,7 +179,7 @@
         <section class="hero">
             <div class="container">
                 <div class="shadow"></div>
-                <div class="no_shadow">
+                <div class="content">
                     <div class="intro">
                         <svg xmlns="http://www.w3.org/2000/svg" width="119.366" height="52.06" viewBox="0 0 119.366 52.06">
                 <g id="Group_84" data-name="Group 84" transform="translate(333 -186)">
@@ -237,14 +238,10 @@
                         </div>
                         <p>Type of subscription</p>
                         <div class="radio_input">
-                            <label for="monthly">Monthly
-                                <input type="radio" id="monthly" name="subscription" value="monthly">
-                                <span class="radio_button"></span>
-                            </label>
-                            <label for="yearly">Yearly
-                                <input type="radio" id="yearly" name="subscription" value="yearly">
-                                <span class="radio_button"></span>
-                            </label><br>
+                            <input type="radio" id="monthly" name="subscription" value="monthly">
+                            <label for="monthly">Monthly</label>
+                            <input type="radio" id="yearly" name="subscription" value="yearly">
+                            <label for="yearly">Yearly</label>
                         </div>
                         <button>Get started</button>
                     </form>
@@ -355,7 +352,7 @@
                                 </div>
                                 <img src="images/svoguneliai-compressor.jpeg" alt="">
                             </div>
-                            <img src="images/bijunai-compressor.jpeg" alt="">
+                            <img src="images/lego-compressor.jpeg" alt="">
                         </div>
                     </div>
                 </div>
@@ -648,21 +645,17 @@
             <div class="container">
                 <h2>Contact us</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <form>
+                <form class="email">
                     <div class="details_input">
                         <input type="text" id="first_name1" name="first_name" placeholder="First name"><br>
                         <input type="text" id="last_name1" name="last_name" placeholder="Last name"><br>
                         <input type="tel" id="phone-number1" name="phone_number" placeholder="Phone number">
                     </div>
                     <div class="radio_input">
-                        <label for="personal">Personal
-                            <input type="radio" id="personal" name="user" value="personal">
-                            <span class="radio_button"></span>
-                        </label>
-                        <label for="company">Company
-                            <input type="radio" id="company" name="user" value="company">
-                            <span class="radio_button"></span>
-                        </label><br>
+                        <input type="radio" id="personal" name="user" value="personal">
+                        <label for="personal">Personal</label>
+                        <input type="radio" id="company" name="user" value="company">
+                        <label for="company">Company</label>
                     </div>
                     <button>Send</button>
                 </form>
