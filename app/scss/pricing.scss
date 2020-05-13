@@ -4,7 +4,6 @@
     background-color: $brandcolor3;
 
     .container {
-        @include container-max;
         @include section-centered;
 
         h2 {
@@ -33,18 +32,22 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                width: 300px;
+                min-width: 300px;
                 border-radius: 5px;
-    
-                @media (max-width: 350px) {
-                    width: 250px;
+                padding-left: 20px;
+                padding-right: 20px;
+
+                @media (max-width: 400px) {
+                    min-width: 250px;
+                    padding-left: 0px;
+                    padding-right: 0px;
                 }
     
                 .card_head {
                     background-color: #1C1C1C;
                     border-radius: 5px 5px 0 0;
     
-                    h4, p, h5 {
+                    h4, p {
                         color: #ffff;
                         text-align: center;
                     }
@@ -56,6 +59,8 @@
                     h5 {
                         padding-bottom: 19px;
                         font-weight: normal;
+                        color: #707070;
+                        text-align: center;
                     }
                     p {
                         margin-top: 0;
@@ -64,14 +69,15 @@
                 table {
                     text-align: center;
                     border-collapse: collapse;
-                    width: 300px;
-                    @media (max-width: 350px) {
-                        width: 250px;
+                    min-width: 300px;
+
+                    @media (max-width: 400px) {
+                        min-width: 250px;
                     }
     
                     thead {
                         th {
-                            color: #ffff;
+                            color: #fff;
                             font-weight: normal;
                             padding-top: 10px;
                             padding-bottom: 10px;

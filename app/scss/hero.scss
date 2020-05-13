@@ -1,21 +1,15 @@
 .hero {
-    margin-top: 72px;
+    margin-top: 76px;
     background-image: url(images/miestas-min.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 80vh;
+    min-height: calc(100vh - 76px - 104px);
     position: relative;
     display: flex;
     align-items: center;
 
-    @media (max-width: 1000px) {
-        min-height: 90vh;
-    }
-
     .container {
-        @include container-max;
-
         .shadow {
             background-color: #1C1C1C;
             opacity: 0.63;
@@ -36,7 +30,7 @@
             }
     
             .intro {
-                width: 557px;
+                max-width: 557px;
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -62,7 +56,6 @@
                     }
                     @media (max-width: 700px) {
                         width: 30%; 
-                        margin-top: 20px;
                     }
                     @media (max-width: 450px) {
                         width: 50%;
@@ -70,17 +63,10 @@
                 }
                 h2, p {
                     color: #F5F5F5;
+                    font-weight: bold;
                 }
                 h2 {
-                    font-weight: normal;
                     position: relative;
-    
-                    @media (max-width: 1000px) {
-                        font-size: 30px;
-                    }
-                    @media (max-width: 450px) {
-                        font-size: 25px;
-                    }
     
                     &::after {
                         content: "";
@@ -116,6 +102,7 @@
                     color: #FFFFFF;
                     background-color: transparent;
                     text-transform: uppercase;
+                    font-weight: bold;
                     cursor: pointer;
     
                     &:active {
@@ -126,22 +113,18 @@
                     }
                 }
             }
-            .subscription {
-                max-width: 360px;
-                background-color: #FFFFFF;
-                border-radius: 5px;
-                z-index: 1;
+            .subscription_form {
                 display: flex;
                 flex-direction: column;
-                box-shadow: 0px 5px 20px #000000;
-    
+                background-color: #fff;
+                border-radius: 5px;
+                z-index: 1;
+                box-shadow: 0px 5px 20px rgba(0,0,0,0.16);
+
                 @media (max-width: 1000px) {
                     margin-bottom: 40px;
                 }
-                @media (max-width: 450px) {
-                    max-width: 300px;
-                }
-    
+  
                 h4, button {
                     height: 57px;
                 }
@@ -153,20 +136,44 @@
                         padding-left: 20px;
                         padding-right: 20px;
                     }
+                        
+                    @media (max-width: 350px) {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
                 }
                 h4 {
                     background-color: #F5F5F5;
                     padding-top: 15px;
-                    font-weight: lighter;
                     border-radius: 5px 5px 0 0;
+                    margin-bottom: 20px;
     
                     span {
                         color: $brandcolor1;
+                        font-weight: bold;
+                        text-transform: uppercase;
                     }
                 }
                 .details_input {
-                    input {
-                        @include details-input; 
+                    .input_with_warning {
+
+                        &:first-child {
+                            margin-top: 20px;
+                        }
+
+                        input {
+                            @include details-input; 
+    
+                            &.alerted {
+                                border: 1px solid red;
+                            }
+                        }
+                        .warning {
+                            font-size: 12px;
+                            height: 20px;
+                            color: red;
+                            padding-left: 10px;
+                        }
                     }
                 }
                 .radio_input {
@@ -227,8 +234,9 @@
                         @include form-label;  
                     }
                 }
-                p {
-                    padding-top: 30px;
+                .headline {
+                    padding-top: 10px;
+                    font-weight: bold;
     
                     @media (max-width: 1000px) {
                         padding-top: 20px;
@@ -238,6 +246,13 @@
                     @include form-button;
                     width: 100%;
                     border-radius: 0 0 5px 5px;
+                    font-weight: bold;
+
+                    &:active {
+                        background-color: #fff;
+                        color: $brandcolor2;
+                        border: 2px solid $brandcolor2;
+                    }
                 }
             }
         }
@@ -246,4 +261,5 @@
         }
     }
 }
+
     

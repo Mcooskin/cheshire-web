@@ -44,7 +44,7 @@
 
   @mixin details-input {
     width: 260px;
-    height: 49px;
+    padding-bottom: 5px;
     border-top: none;
     border-right: none;
     border-left: none;
@@ -70,14 +70,12 @@
   @mixin grid_layout {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
   }
 
-  @mixin container-max {
-    max-width: 1280px;
-    padding: 0 20px;
-    width: 100%;
-    margin: 0 auto;
+  @mixin flex_space_between_align_center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-

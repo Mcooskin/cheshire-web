@@ -95,3 +95,52 @@ for (let i = 0; i < mobileMenuLines.length; i++) {
     }
 )};
     
+// Subscription and contact form validation
+
+function removeAlert(input) {
+    input.classList.remove('alerted');    
+    input.nextElementSibling.innerHTML = "";
+}
+
+function addAlert(input, text) {
+    input.classList.add('alerted');
+    input.nextElementSibling.innerHTML = text;
+}
+
+function validate(event) {
+
+    event.preventDefault();
+
+    let subscriptionForm = event.target;
+
+    let firstName = subscriptionForm.querySelector('input[name=first_name]');
+    let lastName = subscriptionForm.querySelector('input[name=last_name]');
+    let phoneNumber = subscriptionForm.querySelector('input[name=phone_number]');
+
+    removeAlert(firstName);
+    removeAlert(lastName);
+    removeAlert(phoneNumber);
+
+    if (firstName.value.trim() === "") {
+        addAlert(firstName, "Please, enter your first name");
+    }
+
+    if (lastName.value.trim() === "") {
+        addAlert(lastName, "Please, enter your last name");
+    }
+
+    if (isNaN(phoneNumber.value) || phoneNumber.value.trim() === "") {
+        addAlert(phoneNumber, "Please, enter your phone number");
+    }
+    else {
+        firstName.value = "";
+        lastName.value = "";
+        phoneNumber.value = "";
+    }
+}
+
+document.querySelector('.subscription_form').addEventListener('submit', validate);
+
+document.querySelector('.contact_form').addEventListener('submit', validate);
+
+

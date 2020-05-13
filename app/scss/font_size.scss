@@ -6,7 +6,6 @@
 }
 h2 {
     font-size: 36px;
-
     @media (max-width: 450px) {
         font-size: 30px;
     }
@@ -35,14 +34,14 @@ p {
         font-size: 16px;
     }
 }
-.hero p {
-    font-size: 16px;
-}
-.reviews p {
+.hero p, .reviews p {
     font-size: 16px;
 }
 footer p {
     font-size: 18px;
+    @media (max-width: 620px) {
+        font-size: 14px;
+    }
 }
 th, td {
     font-size: 14px;
@@ -50,7 +49,7 @@ th, td {
 .hero button {
     font-size: 14px;
 }
-.subscription button {
+.subscription_form button {
     font-size: 18px;
 }
 .contact button {
@@ -80,9 +79,9 @@ label {
 li {
     font-size: 16px;
 }
-.shade {
-    font-size: 20px;;
-}
 .nav-block span {
     font-size: 14px;
+}
+input {
+    font-size: 12px;
 }
