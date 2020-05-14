@@ -62,7 +62,7 @@
                     }
                 }
                 h2, p {
-                    color: #F5F5F5;
+                    color: #FFF;
                     font-weight: bold;
                 }
                 h2 {
@@ -76,7 +76,7 @@
                         left: 0;
                         height: 2px;
                         width: 80px;
-                        background-color: #FFFFFF;
+                        background-color: #FFF;
                         
                         @media (max-width: 1000px) {
                             left: 50%;
@@ -88,8 +88,7 @@
                     margin-top: 51px;
                     opacity: 0.8;
                     line-height: 1.6;
-                    font-weight: lighter;
-    
+
                     @media (max-width: 1000px) {
                         margin-top: 35px;
                     }
@@ -98,8 +97,8 @@
                     width: 135px;
                     height: 42px;
                     margin-top: 20px;
-                    border: 2px solid #FFFFFF;
-                    color: #FFFFFF;
+                    border: 2px solid #FFF;
+                    color: #FFF;
                     background-color: transparent;
                     text-transform: uppercase;
                     font-weight: bold;
@@ -108,7 +107,7 @@
                     &:active {
                         border: 2px solid #1C1C1C;
                         color: #1C1C1C;
-                        background-color: #FFFFFF;
+                        background-color: #FFF;
                         font-weight: bold;
                     }
                 }
@@ -235,12 +234,8 @@
                     }
                 }
                 .headline {
-                    padding-top: 10px;
+                    padding-top: 5px;
                     font-weight: bold;
-    
-                    @media (max-width: 1000px) {
-                        padding-top: 20px;
-                    }
                 }
                 button {
                     @include form-button;

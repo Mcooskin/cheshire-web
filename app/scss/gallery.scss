@@ -161,10 +161,9 @@
                                     content: "Explore";
                                     display: inline-block;
                                     position: absolute;
-                                    left: 30%;
-                                    transform: translateX(-50%);
                                     top: 50%;
-                                    transform: translateY(-50%);
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
                                     color: #fff;
                                     font-size: 20px;
                                     font-weight: bold;
@@ -185,10 +184,9 @@
                                     content: "Enjoy";
                                     display: inline-block;
                                     position: absolute;
-                                    left: 30%;
-                                    transform: translateX(-50%);
                                     top: 50%;
-                                    transform: translateY(-50%);
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
                                     color: #fff;
                                     font-size: 20px;
                                     font-weight: bold;
@@ -235,10 +233,9 @@
                             content: "Experience";
                             display: inline-block;
                             position: absolute;
-                            left: 35%;
-                            transform: translateX(-50%);
                             top: 50%;
-                            transform: translateY(-50%);
+                            left: 50%;
+                            transform: translate(-50%, -50%);
                             color: #fff;
                             font-size: 20px;
                             font-weight: bold;
